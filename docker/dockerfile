@@ -1,0 +1,15 @@
+FROM php:8.0-apache
+
+# Installation des dépendances système
+RUN apt-get update && apt-get install -y \
+    libicu-dev \
+    libpq-dev \
+    libzip-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Configuration et installation des extensions PHP
+RUN docker-php-ext-configure intl \
+    && docker-php-ext-install intl
+
+# Installation de PDO avec support pour MySQL et PostgreSQL
+RUN docker-php-ext-install pdo pdo_mysql pdo_pgsql
