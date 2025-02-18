@@ -19,47 +19,22 @@
             background-position: center;
             color: rgba(255, 255, 255, 0.438);
             /* Retirer la hauteur fixe ici */
-        }
+ 
+        /* Bouton "Plus d'informations" en marron clair */
+         .btn-lightbrown {
+           background-color: #D2B48C; /* couleur marron clair */
+           border-color: #D2B48C;
+       color: #000; /* texte en noir */
+     }
+     .btn-lightbrown:hover {
+    background-color: #c0a080;
+    border-color: #c0a080;
+      }
+  /* Forcer le texte de la modale en noir */
+      .modal-content {
+        color: #000;
+      }
 
-        .card {
-            background-color: rgba(255, 255, 255, 0.212);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 100%;
-            max-width: 300px;
-            text-align: center;
-            padding: 20px;
-            margin: 15px;
-            transition: transform 0.3s ease;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .card img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .card h2 {
-            margin: 15px 0;
-            color: #ffffff;
-        }
-        .card p {
-            color: #ffffff;
-            font-size: 14px;
-        }
-        .button {
-            background-color: #007bffa9;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #0057b38a;
         }
     </style>
 </head>
@@ -116,19 +91,47 @@
             <main class="col-md-9 col-lg-10 p-4 bg-image w-100 vh-100"> <!-- Utilisation de la classe Bootstrap vh-75 pour 75% de la hauteur de la fenêtre -->
                         <h2 class="mb-4 text-white">Bienvenue au Refuge RKG</h2>
                         <p class="text-white">Sélectionnez une catégorie dans la barre latérale pour consulter leur fiche.</p>
-                
-                <div class="row" id="cardsContainer">
-                    <!-- Carte dynamique du chien -->
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="./téléchargement.jpg" alt="Chien">
-                            <h2 id="dogName">Max</h2>
-                            <p id="dogDescription">Max est un chien actif, plein d'énergie et toujours prêt à jouer. Il adore les câlins et cherche un foyer aimant.</p>
-                            <p id="dogAge">Âge : 3 ans</p>
-                            <button class="button" id="adoptButton">Adopter</button>
-                        </div>
-                    </div>
-                </div>
+
+                        <div class="card" style="width: 18rem;">
+                            <img src="images/Chien1.jpg" class="card-img-top" alt="Nom de l'animal">
+                            <div class="card-body">
+                              <h5 class="card-title">Nom de l'animal</h5>
+                              <p class="card-text">
+                                <strong>Sexe :</strong> Féminin<br>
+                                <strong>Âge :</strong> 3 ans
+                              </p>
+                              <!-- Bouton pour ouvrir la modale -->
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#animalModal">
+                                Plus d'informations
+                              </button>
+                            </div>
+                          </div>
+                          
+                          <!-- Modale pour plus d'informations -->
+                          <div class="modal fade" id="animalModal" tabindex="-1" aria-labelledby="animalModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="animalModalLabel">Détails de l'animal</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <img src="images/Chien1.jpg" class="img-fluid mb-3" alt="Nom de l'animal">
+                                  <p><strong>Nom :</strong> Nom de l'animal</p>
+                                  <p><strong>Sexe :</strong> Féminin</p>
+                                  <p><strong>Âge :</strong> 3 ans</p>
+                                  <p><strong>Numéro d'identification :</strong> 00123</p>
+                                  <p><strong>Pays d'origine :</strong> France</p>
+                                  <p><strong>Histoire :</strong> Voici une brève description de l'histoire de l'animal. Vous pouvez y inclure tous les détails que vous souhaitez mettre en avant pour donner envie aux futurs adoptants.</p>
+                                  <!-- Ajoute d'autres informations si nécessaire -->
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-success">Adopter</button>
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
         </main>
     </div>
 </div>
