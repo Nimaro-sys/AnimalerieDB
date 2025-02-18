@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Refuge GKR</title>
+    <title>Refuge RKG</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
     <style>
         body { height: 100vh; }
         .sidebar { height: 100vh; overflow-y: auto; }
-        .header-title { text-align: center; font-size: 2.5rem; font-weight: 900; letter-spacing: 2px; padding: 15px 0; text-transform: uppercase; }
+        .header-title { text-align: center; font-size: 2.5rem; font-weight: 900; color: #000;; letter-spacing: 2px; padding: 15px 0; text-transform: uppercase; }
         .connexion { font-size: 1rem; font-weight: 600; padding: 5px; }
         #connexionForm { display: none; } /* Masquer le formulaire au début */
         
         .bg-image {
-            background-image: url('./téléchargement.jpg');
+            background-image: url('./images.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -72,24 +72,21 @@
 
         <!-- Contenu principal -->
         <main class="col-md-9 col-lg-10 p-4">
-            <main class="col-md-9 col-lg-10 p-4 bg-image vh-75"> <!-- Utilisation de la classe Bootstrap vh-75 pour 75% de la hauteur de la fenêtre -->
-                <h2 class="mb-4">Bienvenue au Refuge GRK</h2>
-                <p>Sélectionnez une catégorie dans la barre latérale pour consulter leur fiche.</p>
-    </div>
-                <div class="row" id="cardsContainer">
+            <main class="col-md-9 col-lg-10 p-4 bg-image w-100 vh-100"> <!-- Utilisation de la classe Bootstrap vh-75 pour 75% de la hauteur de la fenêtre -->
+                        <h2 class="mb-4 text-white">Bienvenue au Refuge GRK</h2>
+                        <p class="text-white ">Sélectionnez une catégorie dans la barre latérale pour consulter leur fiche.</p>
+                
+                
+                        <div class="row" id="cardsContainer">
                   <!-- Les cards seront injectées ici par JavaScript -->
-                </div>
-              </div>
+               
         </main>
-    </div>
-</div>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/login.js"></script>
 <script src="JS/script.js"></script>
 
 <footer class="bg-dark text-white text-center p-3">
-    <p>&copy; 2025 Refuge GKR. Tous droits réservés.</p>
+    <p>&copy; 2025 Refuge RKG. Tous droits réservés.</p>
 </footer>
 </body>
 </html>
