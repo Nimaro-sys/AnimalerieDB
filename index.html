@@ -11,6 +11,14 @@
         .header-title { text-align: center; font-size: 2.5rem; font-weight: 900; letter-spacing: 2px; padding: 15px 0; text-transform: uppercase; }
         .connexion { font-size: 1rem; font-weight: 600; padding: 5px; }
         #connexionForm { display: none; } /* Masquer le formulaire au début */
+        .bg-image {
+            background-image: url('./chats.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            vh: 100%;
+            /* Retirer la hauteur fixe ici */
+        }
     </style>
 </head>
 <body>
@@ -64,9 +72,10 @@
 
         <!-- Contenu principal -->
         <main class="col-md-9 col-lg-10 p-4">
-            <h2 class="mb-4">Bienvenue au Refuge</h2>
-            <p>Sélectionnez une catégorie dans la barre latérale pour consulter leur fiche.</p>
-            <div class="container mt-5">
+            <main class="col-md-9 col-lg-10 p-4 bg-image vh-75"> <!-- Utilisation de la classe Bootstrap vh-75 pour 75% de la hauteur de la fenêtre -->
+                <h2 class="mb-4">Bienvenue au Refuge</h2>
+                <p>Sélectionnez une catégorie dans la barre latérale pour consulter leur fiche.</p>
+    </div>
                 <div class="row" id="cardsContainer">
                   <!-- Les cards seront injectées ici par JavaScript -->
                 </div>
